@@ -12,18 +12,14 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :title %><br>
+    <%= f.label :title, "Movie Title" %><br>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :year %><br>
+    <%= f.label :year, "Release Year" %><br>
     <%= f.text_field :year %>
   </div>
-  <div class="field">
-    <%= f.label :poster %><br>
-    <%= f.text_field :poster %>
-  </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Get Movie Poster" %>
   </div>
 <% end %>

@@ -11,9 +11,7 @@
 </p>
 
 <p>
-  <strong>Poster:</strong>
-  <%= @movie_request.poster %>
+  <%= image_tag(@movie_request.poster) %>
 </p>
 
-<%= link_to 'Edit', edit_movie_request_path(@movie_request) %> |
-<%= link_to 'Back', movie_requests_path %>
+<%= link_to 'Search Again', new_movie_request_path %>
