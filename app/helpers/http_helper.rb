@@ -21,7 +21,7 @@ module HttpHelper
 
 	def self.format_params(params)
 		query_parts = params.keys.map do |key|
-			no_space = params[key].sub(' ', '+')
+			no_space = params[key].gsub(' ', '+')
 			URI.escape("#{key}=#{no_space}")
 		end
 
