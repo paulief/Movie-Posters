@@ -1,7 +1,7 @@
 <%= form_for(@movie_request) do |f| %>
   <% if @movie_request.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@movie_request.errors.count, "error") %> prohibited this movie_request from being saved:</h2>
+      <h2>Error</h2>
 
       <ul>
       <% @movie_request.errors.full_messages.each do |message| %>
