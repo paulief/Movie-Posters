@@ -1,4 +1,4 @@
-require_relative '../app/helpers/http_helper'
+require_relative '../../app/helpers/http_helper'
 
 RSpec.describe 'HttpHelper' do
 	describe '.get' do
