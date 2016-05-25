@@ -12,12 +12,7 @@ module HttpHelper
 	def self.get(params)
 		# call get to Mashape API with params as query parameters
 		url = "#{BASE_URL}#{format_params(params)}"
-
 		response = HTTP.headers(HEADERS).get(url)
-
-		p response[:code]
-
-		raise 'Bad Request' if response.code != 200
 
 		JSON.parse(response.to_s)
 	end
