@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @movie_request.title %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @movie_request.year %>
+</p>
+
+<p>
+  <strong>Poster:</strong>
+  <%= @movie_request.poster %>
+</p>
+
+<%= link_to 'Edit', edit_movie_request_path(@movie_request) %> |
+<%= link_to 'Back', movie_requests_path %>

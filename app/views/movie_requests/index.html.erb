@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Movie Requests</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Year</th>
+      <th>Poster</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @movie_requests.each do |movie_request| %>
+      <tr>
+        <td><%= movie_request.title %></td>
+        <td><%= movie_request.year %></td>
+        <td><%= movie_request.poster %></td>
+        <td><%= link_to 'Show', movie_request %></td>
+        <td><%= link_to 'Edit', edit_movie_request_path(movie_request) %></td>
+        <td><%= link_to 'Destroy', movie_request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Movie request', new_movie_request_path %>
